@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imperius Store — Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <span class="badge">Acesso restrito</span>
+        <h1>Entrar no painel</h1>
+      </div>
+
+      <section class="login-grid">
+        <div class="card glass">
+          <div class="card-content">
+            <form class="form" id="login-form">
+              <div>
+                <div class="label">
+                  <label for="email">E-mail</label>
+                  <span class="tag">admin@imperius.store</span>
+                </div>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="input"
+                  placeholder="Digite seu e-mail"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+
+              <div>
+                <div class="label">
+                  <label for="password">Senha</label>
+                  <span class="tag">Admin@123</span>
+                </div>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="input"
+                  placeholder="Digite sua senha"
+                  required
+                  minlength="6"
+                  autocomplete="current-password"
+                />
+              </div>
+
+              <div class="actions">
+                <div class="helper">
+                  Use as credenciais de demonstração ou defina as suas no código.
+                </div>
+                <button type="submit" class="button-primary">Entrar</button>
+              </div>
+
+              <div id="feedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h2>Painel administrativo seguro</h2>
+          <p>
+            Valide acessos e acompanhe métricas da loja com um painel moderno. Após
+            autenticar, você será redirecionado para o dashboard administrativo.
+          </p>
+          <ul class="hero-list">
+            <li><span class="icon">🔒</span> Sessão protegida por validação local</li>
+            <li><span class="icon">📈</span> KPIs de vendas, clientes e entregas</li>
+            <li><span class="icon">⚡</span> Interface rápida com feedback imediato</li>
+          </ul>
+        </div>
+      </section>
+
+      <p class="footer">Imperius Store • Gestão e segurança em primeiro lugar</p>
+    </main>
+
+    <script type="module" src="scripts/login.js"></script>
+  </body>
+</html>
