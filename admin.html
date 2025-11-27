@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imperius Store — Painel Administrativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-title">
+        <span>⚡</span>
+        <div>
+          <div>Painel Imperius</div>
+          <small class="nav-user" id="user-meta">Carregando sessão...</small>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <span class="tag">Demo segura</span>
+        <button class="button-ghost" id="logout">Sair</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="header">
+        <span class="badge">Visão geral</span>
+        <h1>Dashboard administrativo</h1>
+      </div>
+
+      <div class="grid stats-grid">
+        <div class="stat">
+          <small>Receita</small>
+          <strong id="stat-revenue">—</strong>
+          <span class="trend" id="stat-revenue-trend">—</span>
+        </div>
+        <div class="stat">
+          <small>Pedidos</small>
+          <strong id="stat-orders">—</strong>
+          <span class="trend" id="stat-orders-trend">—</span>
+        </div>
+        <div class="stat">
+          <small>Clientes ativos</small>
+          <strong id="stat-customers">—</strong>
+          <span class="trend" id="stat-customers-trend">—</span>
+        </div>
+        <div class="stat">
+          <small>Entrega em dia</small>
+          <strong id="stat-delivery">—</strong>
+          <span class="trend" id="stat-delivery-trend">—</span>
+        </div>
+      </div>
+
+      <section class="grid" style="margin-top: 22px;">
+        <div class="card table-card">
+          <div class="card-content">
+            <div class="flex-between">
+              <div>
+                <div class="badge">Últimas movimentações</div>
+                <h2 style="margin: 6px 0 0;">Pedidos recentes</h2>
+              </div>
+              <span class="tag">Atualizado em tempo real (demo)</span>
+            </div>
+
+            <div style="overflow-x: auto; margin-top: 12px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Pedido</th>
+                    <th>Status</th>
+                    <th>Valor</th>
+                    <th>Atualizado</th>
+                  </tr>
+                </thead>
+                <tbody id="orders-table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="flex-between">
+              <div>
+                <div class="badge">Ações rápidas</div>
+                <h2 style="margin: 6px 0 0;">Operações essenciais</h2>
+              </div>
+              <span class="tag">Gerencie a loja</span>
+            </div>
+
+            <div class="actions-list" id="actions-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">Sessão protegida — use o botão de sair para encerrar.</p>
+    </main>
+
+    <script type="module" src="scripts/admin.js"></script>
+  </body>
+</html>
